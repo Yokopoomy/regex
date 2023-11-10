@@ -7,7 +7,9 @@ test.each([
   ['Yoko1234poomy', false],
   ['Yokopoomy_', false],
   ['-Yokopoomy', false],
-  ['Yokopoomy3', false],
+  ['Yokopoomy', true],
+  ['Yokopoomy-', false],
+  ['_Yokopoomy', false],
 ])('Testing userName', (UserName, expectedValue) => {
   const object = new Validator(UserName);
   const result = object.validateUsername();
